@@ -5,8 +5,6 @@ require 'digest'
 
 module Marvel
   module Connection
-    attr_accessor :response
-
     URL = ENV.fetch('marvel_api', 'https://gateway.marvel.com/v1/public/')
 
     MARVEL_PUBLIC_KEY   = '07e3e205bebd46de31d15ee9a76d85c2'

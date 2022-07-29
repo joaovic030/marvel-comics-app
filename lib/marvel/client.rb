@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'marvel/connection'
+require 'marvel/methods'
+require 'marvel/response'
 
 module Marvel
   class Client
