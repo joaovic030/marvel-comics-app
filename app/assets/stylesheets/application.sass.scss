@@ -1,0 +1,9 @@
+// Entry point for your Sass build
+@import "comics/index";
+@import "header";
+@import "colors";
+
+body {
+  background-color: $secondary-color;
+  margin: 0;
+}

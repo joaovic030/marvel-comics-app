@@ -1,0 +1,37 @@
+@import "../colors";
+
+#comic {
+  .comic {
+    &__container {
+      margin-left: 7em;
+      margin-right: 7em;
+      padding-top: 20px;
+    }
+
+    &__list {
+      &-item {
+        img {
+        }
+
+        &-description {
+          background-color: #fff;
+          font-size: 14px;
+          font-weight: bold;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 168px;
+        }
+      }
+
+      &-item:hover {
+        border-bottom: 3px solid $primary-color;
+      }
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import 'colors' ;
+
+#header {
+  .header {
+    &__wrapper {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+    }
+
+    &__search-bar {
+      input {
+        border-radius: 5px;
+        height: 20px;
+        width: 33%;
+      }
+
+      width: 100%;
+      text-align: center;
+    }
+
+    &__logo {}
+  }
+
+  background-color: $primary-color;
+}

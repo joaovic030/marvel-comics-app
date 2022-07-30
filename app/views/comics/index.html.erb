@@ -1,0 +1,19 @@
+<section id="comic">
+  <div class="comic comic__container">
+    <section class="comic__list">
+      <% @comics.each do |comic| %>
+      <div class="comic__list-item">
+        <%= image_tag "#{comic.thumbnail.path}/portrait_fantastic.#{comic.thumbnail.extension}", size: '168x252' %>
+
+        <div class="comic__list-item-description" title="<%= comic.title %>">
+          <%= comic.title %>
+        </div>
+      </div>
+      <% end %>
+    </section>
+
+    <section class="comic__pagination">
+
+    </section>
+  </div>
+</section>
