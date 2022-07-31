@@ -5,13 +5,11 @@
     &__container {
       margin-left: 7em;
       margin-right: 7em;
-      padding-top: 20px;
     }
 
     &__list {
       &-item {
-        img {
-        }
+        img {}
 
         &-description {
           background-color: #fff;
@@ -31,7 +29,30 @@
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
+      padding-top: 20px;
       width: 100%;
+    }
+
+    &__pagination {
+      a[class^='pagination']:not(.is-current) {
+        background-color: white;
+      }
+
+      .is-current {
+        background-color: $primary-color;
+        border-color: $primary-color-2;
+      }
+
+      .pagy-info {
+        color: white;
+      }
+
+      padding-bottom: 10px;
+    }
+
+    .is-secondary-bg {
+      background-color: $secondary-color;
+      color: white;
     }
   }
 }

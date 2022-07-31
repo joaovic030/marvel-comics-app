@@ -1,11 +1,15 @@
 <header id="header">
   <div class="header__wrapper">
-    <%= link_to 'comic', class: 'header__logo' do %>
+    <%= link_to 'comics', class: 'header__logo' do %>
       <%= image_tag 'marvel_logo.png' %>
     <% end %>
 
     <div class="header__search-bar">
-      <input type="text">
+      <%= form_with(url: comics_path,
+                    method: :get,
+                    data: { turbo_frame: 'comics', turbo_action: 'advance', controller: 'comics' }) do |f| %>
+        <%= f.text_field :query, class: "input", data: { action: 'input->comics#searchComicsByCharacters' } %>
+      <% end %>
     </div>
   </div>
 </header>

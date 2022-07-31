@@ -1,0 +1,29 @@
+<%= turbo_frame_tag 'comics' do %>
+  <% if comics.blank? %>
+    <section class="hero is-fullheight is-secondary-bg is-link">
+      <div class="hero-body">
+        <div class="">
+          <p class="title">No comics were found</p>
+          <p class="subtitle">Try to search differently</p>
+        </div>
+      </div>
+    </section>
+  <% else %>
+    <section class="comic__list">
+      <% comics.each do |comic| %>
+        <div class="comic__list-item">
+          <%= image_tag "#{comic.thumbnail.path}/portrait_fantastic.#{comic.thumbnail.extension}", class: 'image', size: '168x252' %>
+
+          <div class="comic__list-item-description" title="<%= comic.title %>">
+            <%= comic.title %>
+          </div>
+        </div>
+      <% end %>
+    </section>
+
+    <section class="comic__pagination mt-5 has-text-centered">
+      <%== pagy_bulma_nav(pagy) %>
+      <%== pagy_info(pagy) %>
+    </section>
+  <% end %>
+<% end %>

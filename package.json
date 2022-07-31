@@ -2,7 +2,12 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@hotwired/stimulus": "^3.1.0",
+    "bulma": "^0.9.4",
+    "lodash": "^4.17.21",
     "sass": "^1.54.0"
   },
-  "scripts": { "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules" }
+  "scripts": {
+    "build:css": "sass ./app/assets/stylesheets/application.bulma.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  }
 }

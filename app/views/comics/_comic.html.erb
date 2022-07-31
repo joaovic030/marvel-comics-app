@@ -1,0 +1,7 @@
+<div class="comic__list-item">
+  <%= image_tag "#{comic.thumbnail.path}/portrait_fantastic.#{comic.thumbnail.extension}", class: 'image', size: '168x252' %>
+
+  <div class="comic__list-item-description" title="<%= comic.title %>">
+    <%= comic.title %>
+  </div>
+</div>

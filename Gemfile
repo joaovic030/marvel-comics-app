@@ -12,8 +12,13 @@ gem "sprockets-rails"
 gem 'faraday', '~> 1.8'
 # A simple HTTP and REST client for Ruby,  inspired by the Sinatra microframework style of specifying actions: get, put, post, delete.
 gem 'rest-client', '~> 2.1'
+
+gem 'rack-attack'
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
+
+# Agnostic pagination in plain ruby. It does it all. Better.
+gem 'pagy', '~> 5.10'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"

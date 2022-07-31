@@ -2,7 +2,7 @@
 
 module Marvel
   module Methods
-    AVAILABLE_ENDPOINTS = ['comics'].freeze # put all marvel endpoints when needed
+    AVAILABLE_ENDPOINTS = %w[comics characters].freeze # put all marvel endpoints when needed
 
     # Just putting a little bit of metaprogramming (of course, a explicit declaration would be clearer to understand)
     # def endpoint_name(params)
