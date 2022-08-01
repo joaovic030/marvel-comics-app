@@ -36,6 +36,18 @@ Just type `rspec` on the project folder
 
 *From what I've seen, two tests may fail, but you can check the code and validate the logic, I stopped fighting the bugs after a while.*
 
+### Testing the flow
+- Main page shows comics
+- Search for a character (deadpool, storm)
+- Favourite - Will redirect to login page, click sign up and create a login
+- Favourite - Now it will favorite
+- Remove favorite clicking in the heart <3
+- In advance I say that in production seems to be a issue with delete request with Turbo, but locally it works (something to improve as nexts steps)
+
+### Production link: https://shielded-spire-95115.herokuapp.com/
+
+> If you got a "retry later" - it is the Rack Attack blocking you.
+
 ### As next steps I would:
 - Setup a Logger to deal with error responses.
 - Use more Faraday middleware to deal with quantity response.
