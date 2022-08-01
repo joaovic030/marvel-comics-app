@@ -11,5 +11,9 @@ module Marvel
     AVAILABLE_ENDPOINTS.each do |endpoint|
       define_method(endpoint.to_sym) { |params = {}| send_request(endpoint, params) }
     end
+
+    def comic(id, params = { comicId: id })
+      send_request("comics/#{id}", params)
+    end
   end
 end

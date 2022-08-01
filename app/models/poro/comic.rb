@@ -5,7 +5,7 @@ module Poro
     attr_accessor :all
 
     LIMIT     = 100
-    PAGE_SIZE = 30
+    ORDER_BY  = '-onsaleDate'
 
     class << self
       include Marvel::ComicService
@@ -35,7 +35,7 @@ module Poro
       private
 
       def default_params
-        { limit: LIMIT }
+        { limit: LIMIT, orderBy: ORDER_BY }
       end
     end
   end

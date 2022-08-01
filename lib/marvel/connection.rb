@@ -22,7 +22,6 @@ module Marvel
         url: URL,
         headers: headers,
         ssl: ssl,
-        # params: params
       }
     end
 
@@ -42,10 +41,6 @@ module Marvel
 
     def ssl
       { verify: false }
-    end
-
-    def params
-      { orderBy: '-onsaleDate' }
     end
   end
 end

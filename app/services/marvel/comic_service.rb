@@ -12,6 +12,10 @@ module Marvel
       client.characters(params)
     end
 
+    def find_comic(id)
+      client.comic(id)
+    end
+
     private
 
     def client

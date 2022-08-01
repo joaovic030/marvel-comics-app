@@ -9,8 +9,6 @@
 
     &__list {
       &-item {
-        img {}
-
         &-description {
           background-color: #fff;
           font-size: 14px;
@@ -20,10 +18,19 @@
           white-space: nowrap;
           width: 168px;
         }
+
+        .icon {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+        }
+
+        position: relative;
       }
 
       &-item:hover {
         border-bottom: 3px solid $primary-color;
+        opacity: 50%;
       }
 
       display: flex;

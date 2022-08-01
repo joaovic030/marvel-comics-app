@@ -1,7 +1,11 @@
-<div class="comic__list-item">
-  <%= image_tag "#{comic.thumbnail.path}/portrait_fantastic.#{comic.thumbnail.extension}", class: 'image', size: '168x252' %>
+<%= image_tag "#{comic.thumbnail.path}/portrait_fantastic.#{comic.thumbnail.extension}", class: 'image', size: '168x252' %>
 
-  <div class="comic__list-item-description" title="<%= comic.title %>">
-    <%= comic.title %>
-  </div>
+<% if user_favourite_comic(comic.id) %>
+  <%= render partial: 'comics/forms/remove_favorite', locals: { comic: comic } %>
+<% else %>
+  <%= render partial: 'comics/forms/favorite', locals: { comic: comic } %>
+<% end %>
+
+<div class="comic__list-item-description" title="<%= comic.title %>">
+  <%= comic.title %>
 </div>

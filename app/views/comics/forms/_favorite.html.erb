@@ -1,0 +1,18 @@
+<%= form_with url: favourite_comics_path, data: { controller: 'favourites' } do |f| %>
+  <%= f.hidden_field :user_id, value: current_user&.id %>
+  <%= f.hidden_field :comic_id, value: comic.id %>
+
+  <% if user_signed_in? %>
+    <%= link_to "#",
+                class: "icon is-large has-text-danger",
+                data: { action: 'click->favourites#favouriteComic' } do %>
+      <i class="fa-regular fa-heart fa-2x favourite-regular" data-action="mouseover->favourites#beatHeart"></i>
+      <i class="fa-solid fa-heart fa-beat fa-2x favourite-beating" style="display: none;"></i>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path, class: "icon is-large has-text-danger", data: { turbo: false } do %>
+      <i class="fa-regular fa-heart fa-2x favourite-regular" data-action="mouseover->favourites#beatHeart"></i>
+      <i class="fa-solid fa-heart fa-beat fa-2x favourite-beating" style="display: none;"></i>
+    <% end %>
+  <% end %>
+<% end %>

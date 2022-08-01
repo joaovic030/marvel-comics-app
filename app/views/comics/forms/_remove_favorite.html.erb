@@ -1,0 +1,14 @@
+<%= form_with url: favourite_comic_path(current_user.favourite_comic(comic.id)), data: { controller: 'favourites' } do |f| %>
+  <%= f.hidden_field :user_id, value: current_user&.id %>
+  <%= f.hidden_field :comic_id, value: comic.id %>
+
+  <%= link_to favourite_comic_path(current_user.favourite_comic(comic.id)),
+              class: "icon is-large has-text-danger",
+              data: {
+                controller: 'favourites',
+                action: 'click->favourites#removeFavouriteComic',
+                turbo_method: :delete,
+              } do %>
+    <i class="fa-solid fa-heart fa-2x"></i>
+  <% end %>
+<% end %>
