@@ -32,9 +32,9 @@ config/master.key
 # config/secrets.yml
 
 # dotenv, dotenv-rails
-# TODO Comment out these rules if environment variables can be committed
-.env
-.env*.local
+
+#.env
+#.env*.local
 
 ## Environment normalization:
 /.bundle
