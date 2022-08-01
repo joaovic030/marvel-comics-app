@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :favourite_comics
 
+  validates :email, presence: true
+
   def favourite_comic(comic_id)
     favourite_comics.find_by(comic_id: comic_id)
   end
