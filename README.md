@@ -25,6 +25,7 @@ Bulma, Stimulus, Turbo(comunication between frontend and backend). That’s all.
 
 ### Running
 Run:
+optional step. Run `docker-compose up` to set up database connection
 1. `bundle install`
 2. `rails db:create db:migrate`
 3. `yarn install`
@@ -42,7 +43,7 @@ Just type `rspec` on the project folder
 - Favourite - Will redirect to login page, click sign up and create a login
 - Favourite - Now it will favorite
 - Remove favorite clicking in the heart <3
-- In advance I say that in production seems to be a issue with delete request with Turbo, but locally it works (something to improve as nexts steps)
+- In advance, I say that production seems to have an issue with delete requests with Turbo, but locally it works (something to improve as next steps).
 
 ### Production link: https://shielded-spire-95115.herokuapp.com/
 
